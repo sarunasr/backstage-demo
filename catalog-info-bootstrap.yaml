@@ -3,7 +3,7 @@ kind: Location
 metadata:
   name: fry-express-demo-bootstrap
   title: Fry Express Systems Demo Bootstrap
-  description: Minimal bootstrap location for UI registration flows that only allow app-scoped entities.
+  description: Minimal bootstrap location for UI registration flows that only allow component and API entities.
 spec:
   type: url
   targets:
@@ -14,4 +14,3 @@ spec:
     - ./components/payments-service/catalog-info.yaml
     - ./components/inventory-service/catalog-info.yaml
     - ./components/notification-worker/catalog-info.yaml
-    - ./templates/python-fastapi-service/template.yaml
