@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: fry-express-demo-components-only
+  title: Fry Express Systems Demo Components Only
+  description: Bootstrap location containing only component and API entities for restrictive Backstage registration flows.
+spec:
+  type: url
+  targets:
+    - ./apis/orders-api.yaml
+    - ./apis/payments-api.yaml
+    - ./components/web-frontend/catalog-info.yaml
+    - ./components/orders-service/catalog-info.yaml
+    - ./components/payments-service/catalog-info.yaml
+    - ./components/inventory-service/catalog-info.yaml
+    - ./components/notification-worker/catalog-info.yaml
