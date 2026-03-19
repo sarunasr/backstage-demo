@@ -24,7 +24,9 @@ The repository is designed for local Backstage demos and includes:
 
 ## Registering In Backstage
 
-Register the root [`catalog-info.yaml`](./catalog-info.yaml) file in your Backstage instance. It references all catalog entities in this repository using relative targets, so a single location registration is enough.
+For local Backstage setups, register the root [`catalog-info.yaml`](./catalog-info.yaml) file. It uses `spec.type: file` and is intended for local filesystem registration.
+
+For GitHub-based registration through the Backstage UI, register [`catalog-info-remote.yaml`](./catalog-info-remote.yaml) instead. It uses `spec.type: url`, which allows relative targets to resolve correctly when the catalog file is loaded from a repository URL.
 
 ## TechDocs
 

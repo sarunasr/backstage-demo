@@ -1,0 +1,28 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: fry-express-demo-remote
+  title: Fry Express Systems Demo Catalog Remote
+  description: Remote registration entrypoint for importing the Fry Express Systems Backstage demo from a repository URL.
+spec:
+  type: url
+  targets:
+    - ./org/groups.yaml
+    - ./org/users.yaml
+    - ./domains/delivery-commerce.yaml
+    - ./systems/customer-commerce.yaml
+    - ./systems/customer-ordering.yaml
+    - ./systems/operations-fulfillment.yaml
+    - ./systems/payments-ledger.yaml
+    - ./systems/payments-processing.yaml
+    - ./systems/platform-runtime.yaml
+    - ./systems/inventory-operations.yaml
+    - ./apis/orders-api.yaml
+    - ./apis/payments-api.yaml
+    - ./resources/platform-resources.yaml
+    - ./components/web-frontend/catalog-info.yaml
+    - ./components/orders-service/catalog-info.yaml
+    - ./components/payments-service/catalog-info.yaml
+    - ./components/inventory-service/catalog-info.yaml
+    - ./components/notification-worker/catalog-info.yaml
+    - ./templates/python-fastapi-service/template.yaml
