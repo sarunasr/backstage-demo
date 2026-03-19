@@ -28,6 +28,10 @@ For local Backstage setups, register the root [`catalog-info.yaml`](./catalog-in
 
 For GitHub-based registration through the Backstage UI, register [`catalog-info-remote.yaml`](./catalog-info-remote.yaml) instead. It uses `spec.type: url`, which allows relative targets to resolve correctly when the catalog file is loaded from a repository URL.
 
+If your Backstage instance uses the default restrictive catalog rules for UI-registered locations, use [`catalog-info-bootstrap.yaml`](./catalog-info-bootstrap.yaml) first. That bootstrap file contains only components, APIs, and the template, which are commonly allowed in the "Register existing component" flow.
+
+To ingest the full demo model including groups, users, domains, systems, and resources, add the repository through `app-config.yaml` with explicit `rules.allow` entries, or expand your catalog backend rules for that location.
+
 ## TechDocs
 
 Each component and the software template includes a `mkdocs.yml` file and a `docs/index.md` entrypoint. When TechDocs is enabled in Backstage, each entity page should show a **Docs** tab with the corresponding Markdown rendered through the TechDocs plugin.
