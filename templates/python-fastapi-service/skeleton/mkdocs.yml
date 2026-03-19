@@ -1,0 +1,6 @@
+site_name: ${{ values.name }}
+site_description: TechDocs for the generated Fry Express Systems FastAPI service.
+nav:
+  - Overview: index.md
+plugins:
+  - techdocs-core

@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: notification-worker
+  title: Notification Worker
+  description: Asynchronous worker that delivers transactional customer notifications for order and payment events.
+  tags:
+    - worker
+    - notifications
+    - messaging
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: notification-worker
+spec:
+  type: worker
+  lifecycle: production
+  owner: team-operations
+  system: operations-fulfillment
+  consumesApis:
+    - orders-api
+    - payments-api
+  dependsOn:
+    - api:default/orders-api
+    - api:default/payments-api
+    - resource:default/rabbitmq-main
+    - resource:default/k8s-prod-cluster

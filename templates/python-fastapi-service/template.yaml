@@ -1,0 +1,58 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: python-fastapi-service
+  title: Python FastAPI Service Starter
+  description: Standard starter template for a new FastAPI-based backend service at Fry Express Systems.
+  tags:
+    - scaffolder
+    - python
+    - fastapi
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  owner: group:default/team-platform
+  type: service
+  parameters:
+    - title: Service Details
+      required:
+        - name
+        - description
+        - owner
+        - system
+      properties:
+        name:
+          title: Service Name
+          type: string
+          description: Kebab-case service identifier used for the generated component.
+          pattern: '^[a-z0-9-]+$'
+        description:
+          title: Description
+          type: string
+          description: Short description for the new service.
+        owner:
+          title: Owner
+          type: string
+          description: Backstage entity reference for the owning team.
+          default: group:default/team-platform
+        system:
+          title: System
+          type: string
+          description: Backstage system name that will contain the new component.
+          default: customer-ordering
+  steps:
+    - id: fetch-base
+      name: Fetch starter assets
+      action: fetch:template
+      input:
+        url: ./skeleton
+        values:
+          name: ${{ parameters.name }}
+          description: ${{ parameters.description }}
+          owner: ${{ parameters.owner }}
+          system: ${{ parameters.system }}
+    - id: summary
+      name: Summarize generated content
+      action: debug:log
+      input:
+        message: Generated FastAPI starter files for ${{ parameters.name }}.

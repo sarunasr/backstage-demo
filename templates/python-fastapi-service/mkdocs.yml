@@ -1,0 +1,6 @@
+site_name: Python FastAPI Service Starter
+site_description: TechDocs for the Fry Express Systems FastAPI starter template.
+nav:
+  - Overview: index.md
+plugins:
+  - techdocs-core

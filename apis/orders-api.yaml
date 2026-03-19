@@ -1,0 +1,40 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: orders-api
+  title: Orders API
+  description: REST API for creating orders, retrieving order state, and tracking delivery milestones.
+  tags:
+    - rest
+    - orders
+    - delivery
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:default/team-platform
+  system: customer-ordering
+  definition: |
+    openapi: 3.0.3
+    info:
+      title: Orders API
+      version: 1.0.0
+      description: Order creation and status tracking API for Fry Express Systems.
+    paths:
+      /orders:
+        post:
+          summary: Create an order
+          responses:
+            '201':
+              description: Order accepted
+      /orders/{orderId}:
+        get:
+          summary: Get order status
+          parameters:
+            - in: path
+              name: orderId
+              required: true
+              schema:
+                type: string
+          responses:
+            '200':
+              description: Order details returned

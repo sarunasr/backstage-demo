@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: payments-processing
+  title: Payments Processing
+  description: Card authorization, capture, reconciliation, and payment event handling for the Fry Express platform.
+  tags:
+    - payments
+    - transactions
+    - finance
+spec:
+  owner: group:default/team-payments
+  domain: delivery-commerce

@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: inventory-service
+  title: Inventory Service
+  description: Service that tracks sellable inventory, reservation status, and fulfillment readiness.
+  tags:
+    - inventory
+    - fulfillment
+    - backend
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: inventory-service
+spec:
+  type: service
+  lifecycle: production
+  owner: team-operations
+  system: operations-fulfillment
+  consumesApis:
+    - orders-api
+  dependsOn:
+    - api:default/orders-api
+    - resource:default/postgres-orders
+    - resource:default/rabbitmq-main
+    - resource:default/k8s-prod-cluster

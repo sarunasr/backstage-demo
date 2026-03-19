@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: payments-service
+  title: Payments Service
+  description: Payment processing service for authorization, capture, refund, and ledger persistence.
+  tags:
+    - payments
+    - backend
+    - compliance
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: payments-service
+spec:
+  type: service
+  lifecycle: production
+  owner: team-payments
+  system: payments-ledger
+  providesApis:
+    - payments-api
+  dependsOn:
+    - resource:default/postgres-payments
+    - resource:default/rabbitmq-main
+    - resource:default/k8s-prod-cluster

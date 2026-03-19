@@ -1,0 +1,57 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: postgres-orders
+  title: Postgres Orders
+  description: Primary transactional database for order placement, lifecycle state, and delivery checkpoints.
+  tags:
+    - postgres
+    - database
+    - orders
+spec:
+  type: database
+  owner: group:default/team-platform
+  system: customer-ordering
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: postgres-payments
+  title: Postgres Payments
+  description: Ledger-aligned datastore for payment authorization, capture, refund, and reconciliation records.
+  tags:
+    - postgres
+    - database
+    - payments
+spec:
+  type: database
+  owner: group:default/team-payments
+  system: payments-processing
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rabbitmq-main
+  title: RabbitMQ Main
+  description: Shared message broker carrying order, payment, and fulfillment domain events across the platform.
+  tags:
+    - rabbitmq
+    - messaging
+    - events
+spec:
+  type: message-broker
+  owner: group:default/team-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: k8s-prod-cluster
+  title: Kubernetes Production Cluster
+  description: Primary production Kubernetes cluster hosting customer, payment, and operations workloads.
+  tags:
+    - kubernetes
+    - production
+    - runtime
+spec:
+  type: kubernetes-cluster
+  owner: group:default/team-platform

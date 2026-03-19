@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: delivery-commerce
+  title: Delivery Commerce
+  description: Digital commerce capabilities for ordering, payment processing, inventory coordination, and last-mile fulfillment.
+  tags:
+    - logistics
+    - ecommerce
+    - delivery
+spec:
+  owner: group:default/team-platform

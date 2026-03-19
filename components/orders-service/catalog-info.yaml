@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: orders-service
+  title: Orders Service
+  description: Core service for creating, validating, and managing customer orders.
+  tags:
+    - python
+    - orders
+    - backend
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: orders-service
+spec:
+  type: service
+  lifecycle: production
+  owner: team-platform
+  system: customer-commerce
+  providesApis:
+    - orders-api
+  consumesApis:
+    - payments-api
+  dependsOn:
+    - api:default/payments-api
+    - resource:default/postgres-orders
+    - resource:default/rabbitmq-main
+    - resource:default/k8s-prod-cluster

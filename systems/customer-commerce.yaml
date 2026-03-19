@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: customer-commerce
+  title: Customer Commerce Platform
+  description: Customer-facing ordering capabilities that power the Fry Express checkout and order lifecycle.
+  tags:
+    - commerce
+    - checkout
+    - web
+spec:
+  owner: group:default/team-platform
+  domain: delivery-commerce

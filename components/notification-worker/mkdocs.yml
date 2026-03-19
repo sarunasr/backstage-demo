@@ -1,0 +1,4 @@
+site_name: Fry Express Notification Worker
+site_description: Technical documentation for the Fry Express notification worker.
+nav:
+  - Overview: index.md

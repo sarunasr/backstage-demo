@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: web-frontend
+  title: Customer Web Frontend
+  description: Customer-facing web application for browsing products, placing orders, and tracking delivery status.
+  tags:
+    - react
+    - frontend
+    - ecommerce
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: web-frontend
+spec:
+  type: website
+  lifecycle: production
+  owner: team-platform
+  system: customer-commerce
+  consumesApis:
+    - orders-api
+    - payments-api
+  dependsOn:
+    - api:default/orders-api
+    - api:default/payments-api
+    - resource:default/k8s-prod-cluster

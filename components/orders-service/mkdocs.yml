@@ -1,0 +1,4 @@
+site_name: Fry Express Orders Service
+site_description: Technical documentation for the Fry Express orders service.
+nav:
+  - Overview: index.md

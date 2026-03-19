@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: inventory-operations
+  title: Inventory Operations
+  description: Inventory visibility, stock reservation, and warehouse event processing for operational teams.
+  tags:
+    - inventory
+    - warehouse
+    - operations
+spec:
+  owner: group:default/team-operations
+  domain: delivery-commerce

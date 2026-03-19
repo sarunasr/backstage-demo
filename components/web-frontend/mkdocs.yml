@@ -1,0 +1,4 @@
+site_name: Fry Express Web Frontend
+site_description: Technical documentation for the Fry Express customer web frontend.
+nav:
+  - Overview: index.md

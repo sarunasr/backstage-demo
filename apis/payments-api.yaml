@@ -1,0 +1,40 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: payments-api
+  title: Payments API
+  description: REST API for payment authorization, capture, and transaction outcome retrieval.
+  tags:
+    - rest
+    - payments
+    - transactions
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:default/team-payments
+  system: payments-processing
+  definition: |
+    openapi: 3.0.3
+    info:
+      title: Payments API
+      version: 1.0.0
+      description: Payment processing API for Fry Express Systems.
+    paths:
+      /payments/authorize:
+        post:
+          summary: Authorize a payment
+          responses:
+            '200':
+              description: Authorization result returned
+      /payments/{paymentId}:
+        get:
+          summary: Get payment state
+          parameters:
+            - in: path
+              name: paymentId
+              required: true
+              schema:
+                type: string
+          responses:
+            '200':
+              description: Payment details returned

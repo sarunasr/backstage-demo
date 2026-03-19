@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: customer-ordering
+  title: Customer Ordering
+  description: Customer-facing ordering workflows spanning storefront experiences, order orchestration, and outbound notifications.
+  tags:
+    - ordering
+    - customer-experience
+    - fulfillment
+spec:
+  owner: group:default/team-platform
+  domain: delivery-commerce

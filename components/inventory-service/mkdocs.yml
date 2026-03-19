@@ -1,0 +1,4 @@
+site_name: Fry Express Inventory Service
+site_description: Technical documentation for the Fry Express inventory service.
+nav:
+  - Overview: index.md

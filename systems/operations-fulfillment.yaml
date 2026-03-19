@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: operations-fulfillment
+  title: Operations Fulfillment Platform
+  description: Inventory availability, dispatch coordination, and operational notifications for delivery fulfillment.
+  tags:
+    - fulfillment
+    - inventory
+    - operations
+spec:
+  owner: group:default/team-operations
+  domain: delivery-commerce

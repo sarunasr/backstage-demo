@@ -1,0 +1,111 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: ava-morgan
+  title: Ava Morgan
+  description: Platform architect focused on Backstage, Kubernetes, and internal developer workflows.
+spec:
+  profile:
+    displayName: Ava Morgan
+    email: ava.morgan@fryexpress.example
+    title: Platform Architect
+  memberOf:
+    - team-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: oliver-bennett
+  title: Oliver Bennett
+  description: Frontend engineer responsible for the Fry Express ordering experience.
+spec:
+  profile:
+    displayName: Oliver Bennett
+    email: oliver.bennett@fryexpress.example
+    title: Senior Frontend Engineer
+  memberOf:
+    - team-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: emma-rivera
+  title: Emma Rivera
+  description: Site reliability engineer supporting shared runtime and observability foundations.
+spec:
+  profile:
+    displayName: Emma Rivera
+    email: emma.rivera@fryexpress.example
+    title: Site Reliability Engineer
+  memberOf:
+    - team-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: liam-chen
+  title: Liam Chen
+  description: Staff engineer leading payment orchestration and settlement integrations.
+spec:
+  profile:
+    displayName: Liam Chen
+    email: liam.chen@fryexpress.example
+    title: Staff Software Engineer
+  memberOf:
+    - team-payments
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: sofia-navarro
+  title: Sofia Navarro
+  description: Product engineer working on payment capture, refunds, and reporting improvements.
+spec:
+  profile:
+    displayName: Sofia Navarro
+    email: sofia.navarro@fryexpress.example
+    title: Software Engineer
+  memberOf:
+    - team-payments
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: noah-petrov
+  title: Noah Petrov
+  description: Operations lead coordinating warehouse systems and fulfillment automation.
+spec:
+  profile:
+    displayName: Noah Petrov
+    email: noah.petrov@fryexpress.example
+    title: Operations Engineering Lead
+  memberOf:
+    - team-operations
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: maya-kim
+  title: Maya Kim
+  description: Engineer focused on inventory accuracy, warehouse event flows, and partner tooling.
+spec:
+  profile:
+    displayName: Maya Kim
+    email: maya.kim@fryexpress.example
+    title: Fulfillment Software Engineer
+  memberOf:
+    - team-operations
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: ethan-brooks
+  title: Ethan Brooks
+  description: Service operations specialist supporting customer notifications and dispatch workflows.
+spec:
+  profile:
+    displayName: Ethan Brooks
+    email: ethan.brooks@fryexpress.example
+    title: Service Operations Specialist
+  memberOf:
+    - team-operations

@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: payments-ledger
+  title: Payments Ledger Platform
+  description: Payment authorization, capture, and ledger workflows for Fry Express orders.
+  tags:
+    - payments
+    - finance
+    - ledger
+spec:
+  owner: group:default/team-payments
+  domain: delivery-commerce

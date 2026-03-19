@@ -1,0 +1,58 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-platform
+  title: Team Platform
+  description: Owns developer experience, shared platform services, and the customer ordering experience.
+  tags:
+    - platform
+    - developer-experience
+    - reliability
+spec:
+  type: team
+  profile:
+    displayName: Team Platform
+    email: platform@fryexpress.example
+  members:
+    - ava-morgan
+    - oliver-bennett
+    - emma-rivera
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-payments
+  title: Team Payments
+  description: Owns payment authorization, settlement flows, and transaction reporting services.
+  tags:
+    - payments
+    - finance
+    - compliance
+spec:
+  type: team
+  profile:
+    displayName: Team Payments
+    email: payments@fryexpress.example
+  members:
+    - liam-chen
+    - sofia-navarro
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-operations
+  title: Team Operations
+  description: Owns inventory operations, fulfillment workflows, and operational service communications.
+  tags:
+    - operations
+    - fulfillment
+    - supply-chain
+spec:
+  type: team
+  profile:
+    displayName: Team Operations
+    email: operations@fryexpress.example
+  members:
+    - noah-petrov
+    - maya-kim
+    - ethan-brooks
